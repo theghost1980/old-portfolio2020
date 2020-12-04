@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import Audioplayer from 'react-h5-audio-player';
 import '../styles/styles.css';
 //media-imgs
-import audioJasmin from '../imgMedia/music/02- Jazmín - Saturno Mangieri.mp3';
-import audioAnaconda from '../imgMedia/music/05 - Anaconda Saturno Mangieri.mp3';
-import audioHazmeVolver from '../imgMedia/music/06 - Hazme Volver Saturno Mangieri.mp3';
-import audioDeVino from '../imgMedia/music/De vino.mp3';
-import audioEstarEnTi from '../imgMedia/music/Estar en ti.mp3';
-import audioOhSenior from '../imgMedia/music/Oh Señor.mp3';
+import audioJasmin from '../imgMedia/music/02.mp3';
+import audioAnaconda from '../imgMedia/music/05.mp3';
+import audioHazmeVolver from '../imgMedia/music/06.mp3';
+import audioDeVino from '../imgMedia/music/Devino.mp3';
+import audioEstarEnTi from '../imgMedia/music/Estarenti.mp3';
+import audioOhSenior from '../imgMedia/music/OhSenor.mp3';
 import audioElSol from '../imgMedia/music/Parapeto-El_Sol.mp3';
 import audioJaspe from '../imgMedia/music/Parapeto-Jaspe.mp3';
 import audioSoldado from '../imgMedia/music/Parapeto-Soldado_de_Paz.mp3';
