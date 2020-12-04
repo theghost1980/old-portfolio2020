@@ -19,6 +19,10 @@ const Paylpalbutton = (props) => {
   /////test data
   // Email ID: sb-dzf43d3560576@personal.example.com
   // System Generated Password:  A9?@Y5+n
+//   Card Type: Visa
+// Card Number: 4032039423214313
+// Expiration Date: 10/2021
+// CVV: 160
   ///end test data
 
   let paypalRef = useRef();
@@ -58,7 +62,7 @@ const Paylpalbutton = (props) => {
                 // Show a cancel page, or return to cart
                 console.log('User Cancelled button');
                 // let's go back to music
-                navigate("/music");
+                navigate("/Music");
               },
               onApprove: async (data, actions) => {
                 const order = await actions.order.capture();
@@ -106,7 +110,8 @@ const Paylpalbutton = (props) => {
   const scrollDown = () => {
     let element = document.getElementById("paidItem");
     // smooth scroll to element and align it at the bottom
-    element.scrollIntoView({ behavior: 'smooth', block: 'end'});
+    element.scrollIntoView({ behavior: 'smooth'});
+    // console.log('Scrolling to => paidItem');
   }
 
   if (paidFor){
@@ -115,18 +120,19 @@ const Paylpalbutton = (props) => {
         <img src={imgCelebration} alt="Celebrate Life" className="imgCelebration" onLoad={scrollDown}/>
         <h1>{t('ppalBtn.messageJoy')}</h1>
 
-        {/* user can download files  */}
-        <img 
-          src={downIcon} 
-          alt="Download in progress..." 
-          onKeyDown={handleDownload}
-          onLoad={handleDownload} 
-          className="downIcon" 
-          onClick={handleDownload}
-          />
-        {/* end of downloading call */} 
-
-        <p>{t('ppalBtn.downloadPT')}</p>
+      <div className="downloadTextPPalBtn">
+          <p>{t('ppalBtn.downloadPT')}</p>
+          {/* user can download files  */}
+          <img 
+            src={downIcon} 
+            alt="Download in progress..." 
+            onKeyDown={handleDownload}
+            onLoad={handleDownload} 
+            className="downIcon" 
+            onClick={handleDownload}
+            />
+          {/* end of downloading call */} 
+        </div>
         <p>{t('ppalBtn.contactMe')}<Link to="/contact">{t('ppalBtn.contactMeAsap')}</Link></p>
         <Link to="/Music" activeClassName="activeNavLink" className="linkDivPayment">
           <p>{t('ppalBtn.linkPPal')}</p>

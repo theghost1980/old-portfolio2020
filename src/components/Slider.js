@@ -73,10 +73,10 @@ const Slider = (props) => {
         <div key={cd.id}>
           <img src={cd.src} alt={cd.title} className="cdImg" />
           <ul className="ulCDInfo">
-            <li>{t('slider.title')} {cd.title}</li>
-            <li>{t('slider.format')} {cd.format}</li>
-            <li>{t('slider.styles')} {cd.styles}</li>
-            <li>{t('slider.price')} ${cd.price}</li>
+            <li key={`${cd.id}-1a`}>{t('slider.title')} {cd.title}</li>
+            <li key={`${cd.id}-2s`}>{t('slider.format')} {cd.format}</li>
+            <li key={`${cd.id}-3d`}>{t('slider.styles')} {cd.styles}</li>
+            <li key={`${cd.id}-4f`}>{t('slider.price')} ${cd.price}</li>
           </ul>
           <Link className="actionBtn" to="/Paymentcheckout" 
             // state={{ 

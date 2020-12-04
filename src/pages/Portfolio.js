@@ -44,7 +44,7 @@ const Portfolio = (props) => {
                               const _src = filteredProject.node.mainImage.file.url;
                               return (
                                   <li key={filteredProject.node.id}>
-                                      <Link className="navLinkProject"  to={`/portfolio/${filteredProject.node.slug}`}>
+                                      <Link className="navLinkProject"  to={`/Portfolio/${filteredProject.node.slug}`}>
                                           <div className="titleDateProject">
                                               <p className="projectTitle">{filteredProject.node.title}</p>
                                               <p className="projectDatePublished">{filteredProject.node.publishedDate}</p>

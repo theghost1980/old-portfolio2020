@@ -1,7 +1,12 @@
 Where r we now?
     - Testing paypal sandbox and downloaing test .zip files
     - Testing site velocity, fixes, etc
-        - Changing main image to jpeg2000. fri 4 dec 02:24 am.
+        - Check for images and prob fixes tomorrow
+    - Subir los archivos de musica, usando git lfs, luego probar si hace una build sin problemas y probar
+    en netlify.
+    - Luego probar si al descargar los audios, genera algun gasto de data, tanto en netlify
+    como en github. Para dedicir si usamos github como repositorio o nos movemos a otro que nos
+    genere gastos por consumo de banda ancha.
 
 TODO:
     - Replace the .zip files for the music ones.

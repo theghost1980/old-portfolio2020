@@ -28,31 +28,31 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
     `)
     //test
-    console.log("=========Blogs Found=========");
+    // console.log("=========Blogs Found=========");
     res.data.allContentfulBlogPost.edges.forEach((edge) => {
-        console.log(edge.node.title);
+        // console.log(edge.node.title);
         createPage({
             component: blogTemplate,
-            path: `/blog/${edge.node.slug}`,
+            path: `/Blog/${edge.node.slug}`,
             context: {
                 slug: edge.node.slug
             }
         })
     })
-    console.log("=========End Blog Found=========");
+    // console.log("=========End Blog Found=========");
     //end test
     //test
-    console.log("=========Projects Found=========");
+    // console.log("=========Projects Found=========");
     res.data.allContentfulProjects.edges.forEach((edge) => {
-        console.log(edge.node.title);
+        // console.log(edge.node.title);
         createPage({
             component: projectTemplate,
-            path: `/portfolio/${edge.node.slug}`,
+            path: `/Portfolio/${edge.node.slug}`,
             context: {
                 slug: edge.node.slug
             }
         })
     })
-    console.log("=========End Project Found=========");
+    // console.log("=========End Project Found=========");
     //end test
 }

@@ -5,7 +5,7 @@ import Head from '../components/Head';
 //translation
 import { useTranslation } from 'react-i18next';
 
-const blog = (props) => {
+const Blog = (props) => {
     const { i18n } = useTranslation();
     const _lang = i18n.language || 'es';
 
@@ -40,7 +40,7 @@ const blog = (props) => {
                         const _url = filteredPost.node.mainImage.file.url;
                         return (
                             <li className="post" key={filteredPost.node.id}>
-                                <Link className="navLinkPost" to={`/blog/${filteredPost.node.slug}`}>
+                                <Link className="navLinkPost" to={`/Blog/${filteredPost.node.slug}`}>
                                     <div className="containerTextPost">
                                         <p className="postTitle">{filteredPost.node.title}</p>
                                         <p className="postDate">{filteredPost.node.publishedDate}</p>
@@ -58,4 +58,4 @@ const blog = (props) => {
     )
 }
 
-export default blog;
+export default Blog;

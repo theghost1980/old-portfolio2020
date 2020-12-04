@@ -40,7 +40,7 @@ const Navbar = (props) => {
                         setExpanded(false);
                         setMusicOn(false);
                         }}>{t('navbar.link3')}</Link></li>
-                    <li><Link to="/blog" activeClassName="activeNavLink" onClick={() => {
+                    <li><Link to="/Blog" activeClassName="activeNavLink" onClick={() => {
                         setExpanded(false);
                         setMusicOn(false);
                         }}>{t('navbar.link4')}</Link></li>

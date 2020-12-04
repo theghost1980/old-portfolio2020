@@ -1081,6 +1081,7 @@ footer {
         align-items: center;
         box-shadow: 1px 1px 8px 1px rgba(0, 57, 110, 0.315);
         margin-top: 20px;
+        margin-bottom: 20px;
         border-radius: 5px;
     }
     .cdImg {
@@ -1226,20 +1227,29 @@ footer {
         align-items: center;
     }
     .downIcon {
-        margin: 0 auto;
-        width: 90px;
-        height: 90px;
-        border-radius: 8px;
-        box-shadow: 1px 1px 5px 1px rgba(0, 57, 110, 0.211);
+        margin-left: 10px;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 5px 2px rgba(0, 57, 110, 0.411);
         cursor: pointer;
     }
     .downIcon:hover{
-        box-shadow: 1px 1px 5px 1px rgba(0, 57, 110, 0.611);
+        box-shadow: 1px 1px 5px 2px rgba(0, 57, 110, 0.711);
     }
     .imgCelebration {
         width: 80%;
         height: auto;
         object-fit: scale-down;
+    }
+    .downloadTextPPalBtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: auto;
     }
     .linkDivPayment {
         display: flex;
@@ -1603,6 +1613,13 @@ footer {
     }
     .ulFooter li:last-child{
         margin-right: 0px;
+    }
+    .downIcon {
+        height: 40px;
+        width: 40px;
+    }
+    .downloadTextPPalBtn {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 516px) {
