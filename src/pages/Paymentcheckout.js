@@ -20,9 +20,9 @@ class Paymentcheckout extends Component {
         // ];
         //the only way to make it work to run build is create another 'just in case empty' array object to pass the products
         const _listCD = [
-            {id:1,'songs':'11','styles': this.props.t('slider.styles1'),src: cdInspiration, price:10.00, title: this.props.t('slider.titleCD1'),'format': this.props.t('slider.formatM'), fileSrc:'./DFiles/Digital-Album-Inspiration.zip', fileName:'Digital-Album-Inspiration.zip'},
-            {id:2,'songs':'11','styles': this.props.t('slider.styles2'),src: cdBhajananda, price:10.00, title: this.props.t('slider.titleCD2'),'format': this.props.t('slider.formatM'), fileSrc:'./DFiles/Bhajananda-CD-Album.zip', fileName:'Bhajananda-CD-Album.zip'},
-            {id:3,'songs':'15','styles': this.props.t('slider.styles3'),src: cdParapeto, price :10.00, title: this.props.t('slider.titleCD3'),'format': this.props.t('slider.formatM'), fileSrc:'./DFiles/Parapeto-CD-Album.zip', fileName:'Parapeto-CD-Album.zip'}
+            {id:1,'songs':'11','styles': this.props.t('slider.styles1'),src: cdInspiration, price:10.00, title: this.props.t('slider.titleCD1'),'format': this.props.t('slider.formatM'), fileSrc:'https://github.com/theghost1980/newportfolio/raw/master/static/DFiles/Digital-Album-Inspiration.zip', fileName:'Digital-Album-Inspiration.zip'},
+            {id:2,'songs':'11','styles': this.props.t('slider.styles2'),src: cdBhajananda, price:10.00, title: this.props.t('slider.titleCD2'),'format': this.props.t('slider.formatM'), fileSrc:'https://github.com/theghost1980/newportfolio/raw/master/static/DFiles/Bhajananda-CD-Album.zip', fileName:'Bhajananda-CD-Album.zip'},
+            {id:3,'songs':'15','styles': this.props.t('slider.styles3'),src: cdParapeto, price :10.00, title: this.props.t('slider.titleCD3'),'format': this.props.t('slider.formatM'), fileSrc:'https://github.com/theghost1980/newportfolio/raw/master/static/DFiles/Parapeto-CD-Album.zip', fileName:'Parapeto-CD-Album.zip'}
         ];
         // from props
         const items = _listCD;
