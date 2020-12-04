@@ -128,7 +128,7 @@ const Paylpalbutton = (props) => {
 
         <p>{t('ppalBtn.downloadPT')}</p>
         <p>{t('ppalBtn.contactMe')}<Link to="/contact">{t('ppalBtn.contactMeAsap')}</Link></p>
-        <Link to="/music" activeClassName="activeNavLink" className="linkDivPayment">
+        <Link to="/Music" activeClassName="activeNavLink" className="linkDivPayment">
           <p>{t('ppalBtn.linkPPal')}</p>
           <img src={iconGuitar} alt="take me to the music with passion" className="iconGuitar" /> 
         </Link>
