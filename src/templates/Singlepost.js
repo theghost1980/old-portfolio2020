@@ -1,15 +1,13 @@
-import React from 'react'; 
+import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 //translation
 import { useTranslation } from 'react-i18next';
-//media-imgs
-import iconLink from '../imgMedia/icons8-external-link-64.png';
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulProjects(slug: { eq: $slug }) {
+    contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishedDate(formatString: "Do MMMM, YYYY")
       mainImage {
@@ -17,18 +15,17 @@ export const query = graphql`
           src
         }
       }
-      description {
+      body {
           json
       }
-      projectUrl
     }
   }
 `
 
-const Singleproject = (props) => {
+const Singlepost = (props) => {
   const { t } = useTranslation();
 
-    const _dataJSON = props.data.contentfulProjects.description.json;
+    const _dataJSON = props.data.contentfulBlogPost.body.json;
     const Text = ({ children }) => <p className="paraPost">{children}</p>;
     const H1 = ({ children }) => <h1 className="h1Post">{children}</h1>;
     const H2 = ({ children }) => <h2 className="h2Post">{children}</h2>;
@@ -56,7 +53,7 @@ const Singleproject = (props) => {
           const url = node.data.target.fields.file["en-US"].url
           return (
             <div className="postImgContainer">
-                <img alt={alt} src={url} className="imgInPost" />
+              <img alt={alt} src={url} className="imgInPost" />
               <p className="textTitleImg">{alt}</p>
             </div>
           )
@@ -64,20 +61,17 @@ const Singleproject = (props) => {
       }
     };
 
-    return (
+    return ( 
         <div className="blogTemplateContainer">
-            <p className="postTitlePost">{props.data.contentfulProjects.title}</p>
-            <div className="divLinkVisit">  
-                <p className="projectVisitText">{t('project.visit')}</p>
-                <a href={props.data.contentfulProjects.projectUrl}>
-                  <img src={iconLink} alt="Icon Link" className="iconLinkProject" />
-                </a>
+            <p className="postTitlePost">{props.data.contentfulBlogPost.title}</p>
+            <div className="mainImgPostCont">
+              <img src={props.data.contentfulBlogPost.mainImage.fluid.src} className="mainImagePost" alt={props.data.contentfulBlogPost.mainImage.fluid.src}/>
             </div>
-            <p className="postDatePost centered">{t('project.published')} {props.data.contentfulProjects.publishedDate}</p>
+            <p className="postDatePost">{t('blog.written')} {props.data.contentfulBlogPost.publishedDate}</p>
             <hr className="hrPost2" />
             {documentToReactComponents(_dataJSON,options)}
         </div>
     )
 }
 
-export default Singleproject;
+export default Singlepost;
