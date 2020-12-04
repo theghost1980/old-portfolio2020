@@ -1,6 +1,6 @@
 import React from 'react';
 // components
-import LanguageMenu from './languageMenu';
+import LanguageMenu from './Languagemenu';
 // translations
 import { useTranslation } from "react-i18next";
 
