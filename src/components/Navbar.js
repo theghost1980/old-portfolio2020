@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import TextNE from './TextNoExpanded';
+import TextNE from './Textnoexpanded';
 // component
-import MusicPlayer from './MusicPlayer';
+import Musicplayer from './Musicplayer';
 // styles
 import '../styles/index.css';
 //translation {t('home.link')}
 import { useTranslation } from "react-i18next";
 
-const NavBar = (props) => {
+const Navbar = (props) => {
     // translation
     const { t } = useTranslation();
 
@@ -53,10 +53,10 @@ const NavBar = (props) => {
                         setMusicOn(false);
                         }}>{t('navbar.link6')}</Link></li>
                 </ul>
-                { musicOn && <MusicPlayer />}
+                { musicOn && <Musicplayer />}
             </div>
         </nav>
     )
 }
 
-export default NavBar;
+export default Navbar;

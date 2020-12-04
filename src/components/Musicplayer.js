@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //components
-import AudioPlayer from 'react-h5-audio-player';
+import Audioplayer from 'react-h5-audio-player';
 import '../styles/styles.css';
 //media-imgs
 import audioJasmin from '../imgMedia/music/02- Jazmín - Saturno Mangieri.mp3';
@@ -25,7 +25,7 @@ const playlist = [
   { name: 'Soldado de Paz - CD Album El Largo Viaje del Sol', src: audioSoldado }
 ]
 
-class MusicPlayer extends Component{
+class Musicplayer extends Component{
   state = {
     currentMusicIndex: 0,
     playerWidth: '400px',
@@ -72,7 +72,7 @@ class MusicPlayer extends Component{
     return (
       <div className="audioPlayerContainer">
         {/* <p>currentMusicIndex: {currentMusicIndex}</p> */}
-        <AudioPlayer
+        <Audioplayer
           style={ { width: this.state.playerWidth, height: 'auto' } }
           // autoPlay={true}
           layout={this.state.playerLayout}
@@ -92,4 +92,4 @@ class MusicPlayer extends Component{
   }
 }
 
-export default MusicPlayer;
+export default Musicplayer;

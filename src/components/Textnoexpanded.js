@@ -2,7 +2,7 @@ import React from 'react';
 // translation
 import { useTranslation } from "react-i18next";
 
-const TextNE = (props) => {
+const Textnoexpanded = (props) => {
     // translation
     const { t } = useTranslation();
 
@@ -14,4 +14,4 @@ const TextNE = (props) => {
     )
 }
 
-export default TextNE;
+export default Textnoexpanded;

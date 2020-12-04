@@ -3,8 +3,8 @@ const path = require('path')
 //new module to create pages from contentful
 module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const blogTemplate = path.resolve('./src/templates/SinglePost.js')
-    const projectTemplate = path.resolve('./src/templates/SingleProject.js')
+    const blogTemplate = path.resolve('./src/templates/Singlepost.js')
+    const projectTemplate = path.resolve('./src/templates/Singleproject.js')
     const res = await graphql(`
         query {
             allContentfulBlogPost {

@@ -2,10 +2,11 @@ import React from 'react';
 //components
 
 // translations
-import { withTrans } from '../i18n/withTrans'
+import PropTypes from 'prop-types';
+import { withTrans } from '../i18n/withTrans';
 // import NavBar from './navBar';
-import Footer from './footer';
-import Header from './header';
+import Footer from './Footer';
+import Header from './Header';
 
 const Layout = ({ children, t, i18n }) => {
     // if (props.height != null){
@@ -22,6 +23,10 @@ const Layout = ({ children, t, i18n }) => {
             <Footer />
         </div>
     )
+}
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
 }
 
 export default withTrans(Layout);

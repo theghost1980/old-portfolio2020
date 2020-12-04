@@ -5,7 +5,7 @@ import Head from '../components/Head';
 //translation
 import { useTranslation } from 'react-i18next';
 
-const BlogPage = (props) => {
+const Blog = (props) => {
     const { i18n } = useTranslation();
     const _lang = i18n.language || 'es';
 
@@ -58,4 +58,4 @@ const BlogPage = (props) => {
     )
 }
 
-export default BlogPage;
+export default Blog;

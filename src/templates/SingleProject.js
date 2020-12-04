@@ -25,7 +25,7 @@ export const query = graphql`
   }
 `
 
-const SingleProject = (props) => {
+const Singleproject = (props) => {
   const { t } = useTranslation();
 
     const _dataJSON = props.data.contentfulProjects.description.json;
@@ -80,4 +80,4 @@ const SingleProject = (props) => {
     )
 }
 
-export default SingleProject;
+export default Singleproject;

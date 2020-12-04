@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import i18next from './Config';
+import i18next from './config';
 import { I18nextProvider, withTranslation } from 'react-i18next';
 
 export function withTrans(WrappedComponent) {

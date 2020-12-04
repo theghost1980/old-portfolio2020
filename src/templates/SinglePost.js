@@ -22,7 +22,7 @@ export const query = graphql`
   }
 `
 
-const SinglePost = (props) => {
+const Singlepost = (props) => {
   const { t } = useTranslation();
 
     const _dataJSON = props.data.contentfulBlogPost.body.json;
@@ -74,4 +74,4 @@ const SinglePost = (props) => {
     )
 }
 
-export default SinglePost;
+export default Singlepost;
