@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';

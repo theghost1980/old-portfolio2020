@@ -61,7 +61,7 @@ const Singlepost = (props) => {
       }
     };
 
-    return (
+    return ( 
         <div className="blogTemplateContainer">
             <p className="postTitlePost">{props.data.contentfulBlogPost.title}</p>
             <div className="mainImgPostCont">
