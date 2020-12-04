@@ -1,8 +1,7 @@
 Where r we now?
-    - Testing surge.sh
-    - domain: chief-lamp.surge.sh
     - Testing paypal sandbox and downloaing test .zip files
     - Testing site velocity, fixes, etc
+        - Changing main image to jpeg2000. fri 4 dec 02:24 am.
 
 TODO:
     - Replace the .zip files for the music ones.
