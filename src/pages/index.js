@@ -1,7 +1,7 @@
 import React from "react";
 //components
 import Head from "../components/Head";
-import ErrorBoundary from "../components/ErrorHandler";
+import Errorboundary from "../components/Errorhandler";
 
 //media-imgs
 import HeartIcon from '../imgMedia/icons8-trust-64.png';
@@ -20,7 +20,7 @@ export default function App(props) {
   return (
         <div className="homeContainer">
           {/* testing error boundaries component */}
-          <ErrorBoundary>
+          <Errorboundary>
           <Head title={t('home.titlePage')} />
           <div className="homeParagraph">
             <p className="textHome">{t('home.textHome1')}</p>
@@ -29,7 +29,7 @@ export default function App(props) {
             <img src={MusicIcon} className="iconsHome" alt="Music Melody" />
             <p className="textHome">{t('home.textHome3')}</p>
           </div>
-          </ErrorBoundary>
+          </Errorboundary>
           {/* end test */}
         </div>
       )
