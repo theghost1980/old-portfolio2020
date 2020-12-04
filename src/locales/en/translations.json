@@ -1,0 +1,127 @@
+{
+    "site": {
+      "Gatsby Default Starter": "Gatsby Default Starter",
+      "description": "Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.",
+      "author": "@theghost1980",
+      "footer": "Built with Gatsby"
+    },
+    "navbar": {
+      "link1": "Home",
+      "link2": "About",
+      "link3": "Portfolio",
+      "link4": "Blog",
+      "link5": "Music",
+      "link6": "Contact",
+      "subtTitle": "Developer & Musician"
+    },
+    "head": {
+      "content": "Full Stack Developer portfolio. Saturno Mangieri design websites using modern technologies as Reactjs, Gatsbyjs, MongoDB, GraphQL, HTML5 and CSS3. He provides practical solutions as: headless CMS, static and dynamic websites that run smoothly and fast. He also composes music that you can buy in this site.",
+      "keywords": "Websites, Websites design, headless cms, static pages, dynamic pages, music, saturno mangieri, i need a good website, cheap websites, modern websites, meditation music, god's music, prayers, singing prayers",
+      "title": "Web Developer and Musican Portfolio - Saturno Mangieri"
+    },
+    "home": {
+      "titlePage": "Home",
+      "textHome1": "Hello. I make websites with",
+      "textHome2": "and",
+      "textHome3": "with passion."
+    },
+    "footer": {
+      "txtFooter1": "Created by Saturno Mangieri © 2020",
+      "txtFooter2": "Powered by"
+    },
+    "about": {
+      "titlePage": "About",
+      "txtAbout1": "I was born in Venezuela and I consider myself a mixture between two cultures: indigenous and European. Since I can remember I have loved computers and musical instruments. I remember my face of astonishment when I saw one of the first Macintosh computers, since then I dedicated myself to learning, singing and playing video games. Over time, I trained in programming and today I am dedicated to web design and Full-Stack development.",
+      "txtAbout2": "I graduated as a Computer Electronic Engineer, known as Computer Science, in 2009 from The Yacambu University. Some areas of my academic background include: computer networks, electrical and electronic circuits, high and low level programming, among others.",
+      "txtAbout3": "Programming Languages",
+      "txtAbout4": "For several years, I have prepared myself in the emerging technologies for the programming of web applications. I believe that innovation never sleeps, and therefore, our learning should not diminish either. If you want to look at my professional experience and other skills, please check out my Linkedin profile by clicking on the Icon below.",
+      "sliderTitle1": "Mobile first Web Designs",
+        "altItem1": "Responsive Websites",
+      "sliderTitle2": "Full responsive technologies based on:",
+        "sliderItem2-1": "Static and Dynamic web applications",
+        "sliderItem2-2": "Single/Multi Page approachs",
+      "sliderTitle3": "Headless CMS using sources as:",
+        "sliderItem3-1": "Prisma and many more",
+        "altItem3": "Responsive Websites Wordpress",
+      "sliderTitle4": "Fast websites:",
+        "sliderItem4-1": "Responsive Images",
+        "sliderItem4-2": "Media files adjusted",
+        "altItem4": "Fast Websites FTW",
+      "sliderTitle5": "Trending Technologies:",
+        "sliderItem5-1": "Node.js, MongoDB and many more.",
+      "sliderTitle6": "Artistic and Conceptual Designs.",
+        "sliderItem6-1": "Professional",
+        "sliderItem6-2": "Fast Development",
+        "altItem6": "Artistic Websites",
+      "sliderTitle7": "We Adapt",
+        "sliderItem7-1": "Depending on your needs",
+        "sliderItem7-2": "I can solo project",
+        "sliderItem7-3": "Or call for more professionals",
+        "altItem7": "One Man Project or More for Websites"
+    },
+    "portfolio": {
+      "titlePage": "Portfolio"
+    },
+    "music": {
+      "titlePage": "Music",
+      "textMusic1": "Since I can remember, I have always loved music. I have started playing guitar since I was 18 years old and also singing. During my childhood I took music classes on the music conservatory Vicente Emilio Sojo in the beautiful city of Barquisimeto in Venezuela. The Music have been one of my greatest passions. I had the opportunity to play among many great musicians. While living on Morocco I could enjoy playing latin music in many places and cities.",
+      "titleMusic1": "Music by other for Others",
+      "textMusic2": "You can support my music and help many others behind me. You can see the CD Albums I have uploaded for you. This has been the effort of many other musicians and producers. By buying one of the albums you are helping us to keep going and also, helping us as Venezuelans during these difficult times. I have placed a nice music player so you can listen some of the songs on each CD Album.",
+      "titleMusic2": "How you can help?",
+      "subtitleMusic1": "Just follow this 4 easy steps:",
+      "listItemMusic1": "Click on the Buy button",
+      "listItemMusic2": "Select the Album(s), then click Proceed to Pay",
+      "listItemMusic3": "Pay using Paypal or CC(*)",
+      "listItemMusic4": "After the payment pass, the music will automatically download",
+      "listItemMusic5": "(*) We do not collect any data. All payments details are collected directly ",
+      "titleMusic3": "An image worth more than thousand words",
+      "textMusic3": "You can visit my image gallery anytime, just by clicking on the image icon, to the right. This are some of the places I have travelled, lived and played."
+    },
+    "slider": {
+      "title": "Title:",
+      "format": "Format:",
+      "styles": "Styles:",
+      "price": "Price:",
+      "btnText": "Buy",
+      "styles1": "Pop Rock Folk Spiritual",
+      "styles2": "Ballad Folk Vocal Meditation",
+      "styles3": "Pop Rock Folk",
+      "titleCD1": "Inspiration",
+      "formatM": "Digital MP3 + Cover",
+      "titleCD2": "Be in You",
+      "titleCD3": "Sun Long Journey",
+      "credits": "Credits:"
+    },
+    "paymentCO": {
+      "addMeText": "Add to cart",
+      "totalA": "Total amount",
+      "proceedP": "Proceed to pay"
+    },
+    "ppalBtn": {
+      "messageJoy": "Great you have helped many people!",
+      "downloadPT": "Download should start now, if not please click on the download Image.",
+      "contactMe": "If is not working, please ",
+      "contactMeAsap": "contact me",
+      "linkPPal": "Take me to Music"
+    },
+    "contact": {
+      "titlePage": "Contact",
+      "titleContact": "Please feel free to contact me anytime, using the form below or click the social media Icons.",
+      "name": "Full name",
+      "email": "Email",
+      "comments": "Comments",
+      "phName": " name here",
+      "phEmail": " email here",
+      "phFeedback": " send me your feedback here",
+      "submitValue": "Submit",
+      "cancelValue": "Cancel",
+      "emailSent": "Email Sent! I will reply you back as soon as I can."
+    },
+    "blog": {
+      "written": "Written on"
+    },
+    "project": {
+      "published": "Published on",
+      "visit": "Please visit the live site anytime"
+    }
+  }

@@ -1,23 +1,36 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+//components
+import Head from "../components/Head";
+import ErrorBoundary from "../components/ErrorHandler";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+//media-imgs
+import HeartIcon from '../imgMedia/icons8-trust-64.png';
+import MusicIcon from '../imgMedia/icons8-musical-notes-64.png';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/blog/">Go to BLOG</Link> <br />
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+// styles
+import '../styles/index.css';
 
-export default IndexPage
+// translations
+import { useTranslation } from "react-i18next";
+
+
+export default function App(props) {
+  const { t } = useTranslation();
+
+  return (
+        <div className="homeContainer">
+          {/* testing error boundaries component */}
+          <ErrorBoundary>
+          <Head title={t('home.titlePage')} />
+          <div className="homeParagraph">
+            <p className="textHome">{t('home.textHome1')}</p>
+            <img src={HeartIcon} className="iconsHome" alt="Heart Love"/>
+            <p className="textHome">{t('home.textHome2')}</p>
+            <img src={MusicIcon} className="iconsHome" alt="Music Melody" />
+            <p className="textHome">{t('home.textHome3')}</p>
+          </div>
+          </ErrorBoundary>
+          {/* end test */}
+        </div>
+      )
+}

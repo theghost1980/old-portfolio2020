@@ -1,14 +1,32 @@
-import React from "react"
+import React from 'react';
+import { Link } from 'gatsby';
+// components
+import Head from '../components/Head';
+//media-imgs
+import SaturnImg from '../imgMedia/saturn-clip-art-5aff6367d9b249.3502323515266865678917.png';
+import IconShip from '../imgMedia/icons8-space-shuttle-64.png';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+const Notfound = () => {
+    return (
+        <div className="containerNF">
+            <Head title="Page Not Found" />
+        <div className="notFoundContainer">
+            <div className="textColumn">
+                <p className="titleNotFound">We've being lost in Saturn</p>
+                <p className="textNotFound">It seems the page you are trying to reach it doesn't exist. Please double check the link.</p>
+            </div>
+            <div className="image">
+                <img src={SaturnImg} alt="Saturn Planet Blue" className="imgNotFound"/>
+            </div>
+        </div>
+        <div className="textIcon">
+            <Link to="/" activeClassName="activeNavLink" className="navNotFound">
+                <p className="smallText">Take me Back Home</p>
+                <img src={IconShip} className="iconShip" alt="Space Ship to Home" />
+            </Link>
+        </div>
+        </div>
+    )
+}
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
-
-export default NotFoundPage
+export default Notfound;

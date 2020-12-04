@@ -1,0 +1,22 @@
+Where r we now?
+    - Testing surge.sh
+    - domain: chief-lamp.surge.sh
+    - Testing paypal sandbox and downloaing test .zip files
+    - Testing site velocity, fixes, etc
+
+TODO:
+    - Replace the .zip files for the music ones.
+    - Enable the live paypal mode.
+    - Find someone to test it buying a CD.
+        - Get feedback from that user experience.
+        - Takes notes and if apply, make improvements.
+    - Final tests & improvements
+    - Go live, add the custom domain
+    - Add SSL if needed.
+
+
+Important:
+    - Surge Data:
+        - Too slow. Site removed from surge.sh
+    - Testing On GitHub.
+    

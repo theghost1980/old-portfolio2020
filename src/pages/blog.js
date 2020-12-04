@@ -1,64 +1,61 @@
-import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+// components
+import Head from '../components/Head';
+//translation
+import { useTranslation } from 'react-i18next';
 
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+const BlogPage = (props) => {
+    const { i18n } = useTranslation();
+    const _lang = i18n.language || 'es';
 
-const Blog = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
-          edges {
-            node {
-              title
-              id
-              slug
-              publishedDate(formatString: "Do MMMM, YYYY")
-              mainImage {
-                fluid(maxWidth: 750) {
-                  ...GatsbyContentfulFluid
-                }
-              }
+    //loading data from contentful api
+    const data = useStaticQuery(graphql`
+        query{
+            allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}){
+            edges {
+                node {
+                    title
+                    slug
+                    publishedDate(formatString: "MMMM Do, yyyy")
+                    id
+                    mainImage {
+                        file {
+                            url
+                        }
+                    }
+                    lang
+                }     
             }
-          }
         }
-      }
-    `
-  )
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <p>
-        <Link to="/">Go back to the homepage</Link>
-      </p>
-      <ul className="posts">
-        {data.allContentfulBlogPost.edges.map(edge => {
-          return (
-            <li className="post" key={edge.node.id}>
-              <h2>
-                <Link to={`/blog/${edge.node.slug}/`}>{edge.node.title}</Link>
-              </h2>
-              <div className="meta">
-                <span>Posted on {edge.node.publishedDate}</span>
-              </div>
-              {edge.node.featuredImage && (
-                <Img
-                  className="featured"
-                  fluid={edge.node.featuredImage.fluid}
-                  alt={edge.node.title}
-                />
-              )}
-              <div className="button">
-                <Link to={`/blog/${edge.node.slug}/`}>Read More</Link>
-              </div>
-            </li>
-          )
-        })}
-      </ul>
-    </Layout>
-  )
+    }`);
+    // console.log(data);
+
+    return (
+            <div className="containerBlogList">
+                <Head title="Blog" />
+                <ul className="postList">
+                    {data.allContentfulBlogPost.edges.filter(post => post.node.lang === _lang).map(filteredPost => {
+                        // console.log(filteredPost);
+                        const _url = filteredPost.node.mainImage.file.url;
+                        return (
+                            <li className="post" key={filteredPost.node.id}>
+                                <Link className="navLinkPost" to={`/blog/${filteredPost.node.slug}`}>
+                                    <div className="containerTextPost">
+                                        <p className="postTitle">{filteredPost.node.title}</p>
+                                        <p className="postDate">{filteredPost.node.publishedDate}</p>
+                                    </div>
+                                    <div className="containerImgPost">
+                                        <img src={_url} alt={filteredPost.node.title} className="blogListImg"/>
+                                    </div>
+                                </Link>
+                            </li>
+                        )
+                        }) 
+                    }
+                </ul>
+            </div>
+    )
 }
 
-export default Blog
+export default BlogPage;
