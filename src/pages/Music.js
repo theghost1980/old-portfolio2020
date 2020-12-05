@@ -87,9 +87,9 @@ const Music = () => {
     console.log(`lang:${_lang}`);
 
     const _listCD = [
-        {id:1,'songs':'11','styles': t('slider.styles1'),src: cdInspiration, price:10.00, title: t('slider.titleCD1'),'format': t('slider.formatM'), fileSrc:"./DFiles/Digital-Album-Inspiration.zip", fileName:"Digital-Album-Inspiration.zip"},
-        {id:2,'songs':'11','styles': t('slider.styles2'),src: cdBhajananda, price:10.00, title: t('slider.titleCD2'),'format': t('slider.formatM'), fileSrc:"./DFiles/Bhajananda-CD-Album.zip", fileName:"Bhajananda-CD-Album.zip"},
-        {id:3,'songs':'15','styles': t('slider.styles3'),src: cdParapeto, price :10.00, title: t('slider.titleCD3'),'format': t('slider.formatM'), fileSrc:"./DFiles/Parapeto-CD-Album.zip", fileName:"Parapeto-CD-Album.zip"}
+        {id:1,'songs':'11','styles': t('slider.styles1'),src: cdInspiration, price:10.00, title: t('slider.titleCD1'),'format': t('slider.formatM'), fileSrc:"https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Digital-Album-Inspiration.zip", fileName:"Digital-Album-Inspiration.zip"},
+        {id:2,'songs':'11','styles': t('slider.styles2'),src: cdBhajananda, price:10.00, title: t('slider.titleCD2'),'format': t('slider.formatM'), fileSrc:"https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Bhajananda-CD-Album.zip", fileName:"Bhajananda-CD-Album.zip"},
+        {id:3,'songs':'15','styles': t('slider.styles3'),src: cdParapeto, price :10.00, title: t('slider.titleCD3'),'format': t('slider.formatM'), fileSrc:"https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Parapeto-CD-Album.zip", fileName:"Parapeto-CD-Album.zip"}
     ];
 
     const [gallery, setGallery] = useState(false);
