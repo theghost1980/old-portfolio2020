@@ -94,12 +94,13 @@ const Paylpalbutton = (props) => {
       itemsBought.forEach(item => {
         console.log(`++++++++Downloading ${item.fileName}+++++++`);
         const _path = item.fileSrc;
-        console.log(`Downloading from: ${_path}`)
+        // console.log(`Downloading from: ${_path}`)
         Filesaver.saveAs( _path, item.fileName);
       })
     } catch (err) {
         console.log('=====Fatal Error Downloading Files=====');
         console.log(err);
+        console.log('Please contact me using the contact page');
         console.log('=====End Error Downloading Files=====');
 
     }
