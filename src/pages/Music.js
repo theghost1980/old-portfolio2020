@@ -104,9 +104,8 @@ const Music = () => {
         /////s: ED23ubfOKrl7BpvVtn0qSrmwFo3IJmaaU75JbLQM3JZfFcbaE2_3YqwjSQFt9hEnp4cJhGzoGMFL_y-n
         /////
         const script = document.createElement("script");
-        script.src =
-            "https://www.paypal.com/sdk/js?client-id=ARN1sPZp6DLblYVX_w9k-L3l9cfPhzGuc-ISmWhAPFQ2NDgFhCzzoXdQ9mFrAc8s4CQWO3vPF1fQ6dod&currency=USD"; //Sandbox
-            //    "https://www.paypal.com/sdk/js?client-id=ATZS5RnQGQWlVQMwVQoHrRZS0xXnWxgYbZ6MQB3xVVgYagxE5Q_tu0GDQRijfJPorf0e07p0lIQqb1H-&currency=USD"; //LIVE
+        script.src = "https://www.paypal.com/sdk/js?client-id=ATZS5RnQGQWlVQMwVQoHrRZS0xXnWxgYbZ6MQB3xVVgYagxE5Q_tu0GDQRijfJPorf0e07p0lIQqb1H-&currency=USD";
+        
         //handlers
         script.onload = function() {
             console.log("PayPal script loaded");

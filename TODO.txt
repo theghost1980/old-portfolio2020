@@ -6,6 +6,7 @@ Where r we now?
     - Probando ahora gitlab para medir consumo, segun que dan 10GB de ancho de banda.
 
 TODO:
+    - habilitar que el browser detecte el idioma del sistema operativo y lo asigne al i18next.
     - Enable the live paypal mode.
     - Find someone to test it buying a CD.
         - Get feedback from that user experience.
