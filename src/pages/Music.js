@@ -103,8 +103,10 @@ const Music = () => {
         /////new Client-ID: ATZS5RnQGQWlVQMwVQoHrRZS0xXnWxgYbZ6MQB3xVVgYagxE5Q_tu0GDQRijfJPorf0e07p0lIQqb1H-
         /////s: ED23ubfOKrl7BpvVtn0qSrmwFo3IJmaaU75JbLQM3JZfFcbaE2_3YqwjSQFt9hEnp4cJhGzoGMFL_y-n
         /////
+        const _urlSDKLive =  "https://www.paypal.com/sdk/js?client-id=ATZS5RnQGQWlVQMwVQoHrRZS0xXnWxgYbZ6MQB3xVVgYagxE5Q_tu0GDQRijfJPorf0e07p0lIQqb1H-&currency=USD";
+        const _urlSDKTest =  "https://www.paypal.com/sdk/js?client-id=ARN1sPZp6DLblYVX_w9k-L3l9cfPhzGuc-ISmWhAPFQ2NDgFhCzzoXdQ9mFrAc8s4CQWO3vPF1fQ6dod&currency=USD";
         const script = document.createElement("script");
-        script.src = "https://www.paypal.com/sdk/js?client-id=ATZS5RnQGQWlVQMwVQoHrRZS0xXnWxgYbZ6MQB3xVVgYagxE5Q_tu0GDQRijfJPorf0e07p0lIQqb1H-&currency=USD";
+        script.src = _urlSDKLive;
         
         //handlers
         script.onload = function() {

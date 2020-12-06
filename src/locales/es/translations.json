@@ -95,7 +95,8 @@
     "paymentCO": {
       "addMeText": "Añadir al carrito",
       "totalA": "Monto Total",
-      "proceedP": "Pagar"
+      "proceedP": "Pagar",
+      "important": "Recomiendo usar el PC o el escritorio para evitar posibles errores al descargar los archivos. También asegúrese de que su dispositivo o PC tenga suficiente espacio. Espacio mínimo recomendado: 90Mb para cada CD-Album."
     },
     "ppalBtn": {
       "messageJoy": "Grandioso has ayudado a muchas personas!",

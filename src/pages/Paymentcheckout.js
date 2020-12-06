@@ -124,6 +124,7 @@ class Paymentcheckout extends Component {
                         <Paylpalbutton amount={this.state.amount} description={_description} itemsBought={itemsBought} />
                     }
                 </div>
+                <p className="paymentNote">{this.props.t('paymentCO.important')}</p>
             </div>
         )
     }

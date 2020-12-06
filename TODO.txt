@@ -7,17 +7,14 @@ Where r we now?
 
 TODO:
     - habilitar que el browser detecte el idioma del sistema operativo y lo asigne al i18next.
-    - Enable the live paypal mode.
-    - Find someone to test it buying a CD.
+    - Enable the live paypal mode. DONE - 06/12 17:05.
+        - testing with Lauren making the first buy.
+        - Results of test:
+            - Payments passed and was received as a money usual money.
+            - She must test if the files she received on her phone are working. 82.1 Mb received.
         - Get feedback from that user experience.
         - Takes notes and if apply, make improvements.
     - Final tests & improvements
-    - Go live, add the custom domain
-    - Add SSL if needed.
-
-
-Important:
-    - Surge Data:
-        - Too slow. Site removed from surge.sh
-    - Testing On GitHub.
+    - Go live, add the custom domain. DONE - 06/12.
+    - Add SSL if needed. Netflity added for  free for 3 months under auto-renew.
     

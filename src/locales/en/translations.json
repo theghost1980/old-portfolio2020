@@ -95,7 +95,8 @@
     "paymentCO": {
       "addMeText": "Add to cart",
       "totalA": "Total amount",
-      "proceedP": "Proceed to pay"
+      "proceedP": "Proceed to pay",
+      "important": "Note: I recommend using PC or desktop to avoid possible error while downloading the files. Also please make sure your device or PC have enough space. Recommended minimun space: 90Mb for each CD-Album."
     },
     "ppalBtn": {
       "messageJoy": "Great you have helped many people!",

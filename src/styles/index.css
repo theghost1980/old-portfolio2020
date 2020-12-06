@@ -1262,6 +1262,14 @@ footer {
         width: 35px;
         height: 35px;
     }
+    .paymentNote {
+        font-weight: bold;
+        text-align: center;
+        font-size: small;
+        width: 60%;
+        color: var(--var-primary-color);
+        font-family: var(--var-primary-font);
+    }
     /* end payment div */
 /* end music page */
 
