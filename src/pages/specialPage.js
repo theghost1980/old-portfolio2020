@@ -36,6 +36,7 @@ const Specialpage = () => {
                   window.gtag('event', 'download', {
                     'method': 'true'
                   });
+                  console.log('Event sent: download, success');
 
               } catch (err) {
                   console.log('=====Fatal Error Downloading Files=====');
@@ -46,6 +47,7 @@ const Specialpage = () => {
                   window.gtag('event', 'download', {
                     'method': 'failed'
                   });
+                  console.log('Event sent: download, failed download by error');
           
             }
         } else if (password !== "navidad2020$$") {
@@ -55,7 +57,7 @@ const Specialpage = () => {
             window.gtag('event', 'download', {
                 'method': 'failed attempt'
             });
-            // console.log(window.gtag);
+            console.log('Event sent: download, failed attempt');
         }
     }
 
