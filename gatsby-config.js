@@ -22,24 +22,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        icon: `src/images/gatsby-icon.ico`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Saturnoman`,
-        short_name: `Saturnoman`,
-        start_url: `/`,
-        background_color: `#00488E`,
-        theme_color: `#00488E`,
-        display: `browser`,
-        icon: `src/images/gatsby-icon.ico`, // This path is relative to the root of the site.
-      },
-    },
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-contentful`,
@@ -59,6 +42,18 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Saturnoman`,
+        short_name: `Saturnoman`,
+        start_url: `/`,
+        background_color: `#00488E`,
+        theme_color: `#00488E`,
+        display: `minimal-ui`,
+        icon: `src/images/planet.png`, // This path is relative to the root of the site.
       },
     },
     {
