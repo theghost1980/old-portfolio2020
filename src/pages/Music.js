@@ -85,7 +85,7 @@ const _listEN = [
 const Music = () => {
     const { t, i18n } = useTranslation();
     const _lang = i18n.language || 'es';
-    console.log(`lang:${_lang}`);
+    // console.log(`lang:${_lang}`);
 
     const _listCD = [
         {id:1,'songs':'11','styles': t('slider.styles1'),src: cdInspiration, price:10.00, title: t('slider.titleCD1'),'format': t('slider.formatM'), fileSrc:"https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Digital-Album-Inspiration.zip", fileName:"Digital-Album-Inspiration.zip"},
@@ -123,7 +123,7 @@ const Music = () => {
 
     return (
         <div className="musicContainer">
-            <Head title={t('music.titlePage')}/>
+            <Head title={t('music.titlePage')} lang={_lang}/> 
             <div className="marginLeftRight">
                 {/* special sections for navidad */}
                 <div className="specialDiv">

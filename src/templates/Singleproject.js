@@ -6,6 +6,8 @@ import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { useTranslation } from 'react-i18next';
 //media-imgs
 import iconLink from '../imgMedia/icons8-external-link-64.png';
+//components
+import Head from '../components/Head';
 
 export const query = graphql`
   query($slug: String!) {
@@ -66,6 +68,7 @@ const Singleproject = (props) => {
 
     return (
         <div className="blogTemplateContainer">
+          <Head title={props.data.contentfulProjects.title}/>
             <p className="postTitlePost">{props.data.contentfulProjects.title}</p>
             <div className="divLinkVisit">  
                 <p className="projectVisitText">{t('project.visit')}</p>

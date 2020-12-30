@@ -9,6 +9,8 @@ import iconGH from '../imgMedia/icons8-github-64.png';
 import iconLD from '../imgMedia/icons8-linkedin-circled-64.png';
 // translations
 import { withTranslation } from 'react-i18next';
+// translations
+import { useTranslation } from 'react-i18next';
 
 const userId = "user_U5jGLkv3g6gljGYHt5us6";
 const serviceId = "infosteemitvenezuela";
@@ -28,10 +30,10 @@ class Contact extends React.Component {
     }
 
     render() {
-    
+
       return (
         <div className="contactContainer">
-          <Head title={this.props.t('contact.titlePage')}/>
+          <Head title={this.props.t('contact.titlePage')} lang={this.props.i18n.language}/>
         <div className="wMarginCont">
         <p className="titleContact">{this.props.t('contact.titleContact')}</p>
         <div className="formContainer">

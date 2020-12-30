@@ -5,16 +5,17 @@ import imageView from '../imgMedia/miniViewSite.png';
 // translations
 import { useTranslation } from "react-i18next";
 
-const Head = ({ title }) => {
+const Head = ({ title, lang }) => {
     const { t } = useTranslation();
-
     const content = t('head.content');
     const keywords = t('head.keywords');
     const _title = t('head.title');
     const _subTitle = t('navbar.subtTitle');
 
     return (
-        <Helmet>
+        <Helmet htmlAttributes={{
+            lang: lang
+        }}>
             <meta charSet="utf-8" />
             <meta name="author" content="Saturno Mangieri" />
             <meta name="title" content={_title} />

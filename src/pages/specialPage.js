@@ -15,7 +15,8 @@ import Filesaver from 'file-saver';
 const Specialpage = () => {
     const [password, setPassword] = useState('');
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const _lang = i18n.language || 'es';
 
     // test gtag
     useEffect(() => {
@@ -63,7 +64,7 @@ const Specialpage = () => {
 
     return (
         <div className="specialCont">
-            <Head title={t('music.specialTitle')}/>
+            <Head title={t('music.specialTitle')} lang={_lang}/> 
             <div className="buttonSpeCont">
                 <input type="text" 
                     onChange={(e) => setPassword(e.target.value)} 

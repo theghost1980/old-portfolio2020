@@ -4,6 +4,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 //translation
 import { useTranslation } from 'react-i18next';
+//components
+import Head from '../components/Head';
 
 export const query = graphql`
   query($slug: String!) {
@@ -63,6 +65,7 @@ const Singlepost = (props) => {
 
     return ( 
         <div className="blogTemplateContainer">
+           <Head title={props.data.contentfulBlogPost.title}/>
             <p className="postTitlePost">{props.data.contentfulBlogPost.title}</p>
             <div className="mainImgPostCont">
               <img src={props.data.contentfulBlogPost.mainImage.fluid.src} className="mainImagePost" alt={props.data.contentfulBlogPost.mainImage.fluid.src}/>

@@ -17,7 +17,8 @@ import Linkedin from '../imgMedia/icons8-linkedin-circled-64.png';
 //props, lists & definititions
 
 const About = (props) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const _lang = i18n.language || 'es';
 
     const _list = [
         {'id':'0-textCarousel','title':t('about.sliderTitle1'),'list': [{'item':''},{'item': ''}],'icon':true,'src':'./icons-imgs/responsive.png','alt':t('about.altItem1')},
@@ -34,7 +35,7 @@ const About = (props) => {
     return (
         // <Layout>
             <div className="aboutContainer">
-                <Head title={t('about.titlePage')}/>
+                <Head title={t('about.titlePage')} lang={_lang}/> 
                 <section className="topSection">
                     <div className="divCol2Cont">
                         <div className="divCol59">

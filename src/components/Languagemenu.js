@@ -10,7 +10,7 @@ const LanguageMenu = (props) => {
   const { i18n } = useTranslation();
   
   const [values, setValues] = useState({
-    language: 'es'
+    language: i18n.language
   });
 
   function handleChange(event) {

@@ -4,6 +4,8 @@ import Paylpalbutton from '../components/Paypalbutton';
 import Head from '../components/Head';
 // translations
 import { withTranslation } from 'react-i18next';
+// translations
+import { useTranslation } from 'react-i18next';
 //media-imgs
 import cdInspiration from '../imgMedia/Inspiration-caratula.jpg';
 import cdBhajananda from '../imgMedia/bhajananda-estar-en-ti.png';
@@ -85,7 +87,7 @@ class Paymentcheckout extends Component {
         
         return (
             <div className="paymentCont">
-                <Head title="Checkout" />
+                <Head title="Checkout" llang={this.props.i18n.language}/> 
                 <ul className="ulAlbumsContainer">
                     {_products.map(item => {
                         return (

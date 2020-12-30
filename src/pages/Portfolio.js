@@ -38,7 +38,7 @@ const Portfolio = (props) => {
     return (
             // <Layout>
                 <div className="portfolioContainer">
-                    <Head title={t('portfolio.titlePage')} />  
+                    <Head title={t('portfolio.titlePage')} lang={_lang}/>  
                     <ul className="projectList" >
                         {data.allContentfulProjects.edges.filter(project => project.node.lang === _lang).map(filteredProject => {
                               const _src = filteredProject.node.mainImage.file.url;

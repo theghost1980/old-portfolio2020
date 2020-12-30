@@ -33,7 +33,7 @@ const Blog = (props) => {
 
     return (
             <div className="containerBlogList">
-                <Head title="Blog" />
+                <Head title="Blog" lang={_lang}/> 
                 <ul className="postList">
                     {data.allContentfulBlogPost.edges.filter(post => post.node.lang === _lang).map(filteredPost => {
                         // console.log(filteredPost);

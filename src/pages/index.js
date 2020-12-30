@@ -15,19 +15,20 @@ import { useTranslation } from "react-i18next";
 
 
 export default function App(props) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+    const _lang = i18n.language || 'es';
 
   return (
         <div className="homeContainer">
           {/* testing error boundaries component */}
           <Errorboundary>
-          <Head title={t('home.titlePage')} />
+          <Head title={t('home.titlePage')} lang={_lang}/> 
           <div className="homeParagraph">
-            <p className="textHome">{t('home.textHome1')}</p>
+            <h1 className="textHome">{t('home.textHome1')}</h1>
             <img src={HeartIcon} className="iconsHome" alt="Heart Love"/>
             <p className="textHome">{t('home.textHome2')}</p>
             <img src={MusicIcon} className="iconsHome" alt="Music Melody" />
-            <p className="textHome">{t('home.textHome3')}</p>
+            <h2 className="textHome">{t('home.textHome3')}</h2>
           </div>
           </Errorboundary>
           {/* end test */}
