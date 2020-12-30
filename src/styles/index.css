@@ -13,7 +13,7 @@
 /* paypal button credits https://www.npmjs.com/package/gatsby-plugin-paypal */
 /* photo Photo by Ian Schneider on Unsplash https://unsplash.com/photos/PAykYb-8Er8 */
 /* cd album image credits https://www.seekpng.com/idown/u2y3w7w7i1t4y3w7_graphic-instruments-guitar-design-flame-musical-clipart-flaming/ */
-
+/* https://www.freepik.es/vector-premium/linda-santa-claus-tipografia-ho-ho-ho_6038406.htm */
 /* fonts */
 @import url('https://fonts.googleapis.com/css?family=Lato|Poppins');
 
@@ -924,6 +924,86 @@ footer {
 /* end portfolio */
 
 /* Music page */
+/* special div for navidad */
+    .buttonSpeCont {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .btnSpecialDownload {
+        color: var(--var-color-whitish);
+        font-size: large;
+        background: #005DB6;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+    }
+    .btnSpecialDownload:hover{
+        cursor: pointer;
+        background-color: rgb(106, 178, 245);
+        color: var(--var-primary-color);
+    }
+    .specialCont {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        /* background: rgba(0, 94, 182, 0.12); */
+    }
+    .specialDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 10px;
+        background: rgba(118, 144, 168, 0.452);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .textReadingSpecial {
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: initial;
+        font-family: var(--var-secondary-font);
+        color: rgb(184, 6, 6);
+        font-weight: bold;
+    }
+    .linkMore  a {
+        color:var(--var-yellowish-color);
+    }
+    .coloredFontTitle {
+        color: var(--var-primary-color);
+        font-style: var(--var-primary-font);
+    }
+    .coloredParagr {
+        color: var(--var-primary-color);
+        font-style: var(--var-secondary-font);
+    }
+    .santaImg {
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 1px var(--var-primary-color);
+        display: block;
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .inputPassSpe {
+        color: var(--var-primary-color);
+        font-style: var(--var-secondary-font);
+        text-align: center;
+        height: 25px;
+        margin-top: 20px;
+        border-radius: 10px;
+        border: 1px solid var(--var-primary-color);
+        margin-bottom: 10px;
+    }
+/* end special div */
 .musicContainer {
     margin-top: var(--var-marginTop40Section);
     margin-bottom: var(--var-marginBottom60Section);
@@ -1577,6 +1657,11 @@ footer {
     }
 }
 @media only screen and (max-width: 616px) {
+    /* special div for navidad */
+    .specialCont {
+        width: 85%;
+    }
+    /* end special div */
     .expanded{
         height: 450px;
     }
@@ -1688,6 +1773,11 @@ footer {
     }
 }
 @media only screen and (max-width: 416px) {
+    /* special div for navidad */
+    .specialCont {
+        width: 95%;
+    }
+    /* end spcial div */
     nav {
         box-shadow: none;
     }

@@ -26,6 +26,7 @@ const About = (props) => {
         {'id':'3-textCarousel','title':t('about.sliderTitle4'),'list': [{'item':t('about.sliderItem4-1')},{'item': t('about.sliderItem4-2')}],'icon':true,'src':'./icons-imgs/fast.png','alt':t('about.altItem4')},
         {'id':'4-textCarousel','title':t('about.sliderTitle5'),'list': [{'item':'ReactJs, GatsbyJs y GraphQL'},{'item': 'Javascript & Typescript'},{'item': t('about.sliderItem5-1')}],'icon':false},
         {'id':'5-textCarousel','title':t('about.sliderTitle6'),'list': [{'item':t('about.sliderItem6-1')},{'item': t('about.sliderItem6-2')}],'icon':true,'src':'./icons-imgs/artistic.png','alt':t('about.altItem6')},
+        {'id':'51-textCarousel','title':t('music.slider'),'list': [{'item':t('music.slider1-1')}],'icon':false},
         {'id':'6-textCarousel','title':t('about.sliderTitle7'),'list': [{'item':t('about.sliderItem7-1')},{'item': t('about.sliderItem7-2')},{'item': t('about.sliderItem7-3')}],'icon':true,'src':'./icons-imgs/help.png','alt':t('about.altItem7')}
         // {'id':'0-textCarousel','title':'Mobile First Web Designs','list': [{'item':''},{'item': ''}]},
     ];

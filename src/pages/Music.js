@@ -12,6 +12,7 @@ import iconClose from '../imgMedia/icons8-multiply-64.png';
 import cdInspiration from '../imgMedia/Inspiration-caratula.jpg';
 import cdBhajananda from '../imgMedia/bhajananda-estar-en-ti.png';
 import cdParapeto from '../imgMedia/parapeto-largo-viaje-del-sol.png';
+import { Link } from 'gatsby';
 
 
 //props, lists & declarations
@@ -124,6 +125,12 @@ const Music = () => {
         <div className="musicContainer">
             <Head title={t('music.titlePage')}/>
             <div className="marginLeftRight">
+                {/* special sections for navidad */}
+                <div className="specialDiv">
+                    <p className="textReadingSpecial centered">{t('music.specialP')}</p>
+                    <Link to="/specialPage/" className="linkMore">{t('music.readmore')}</Link>
+                </div>
+                {/* end special section */}
                 <p className="textReading topMarginTextP spreadLineH justifyT margin20">{t('music.textMusic1')}</p>
                 {/* <p className="textReading2 spreadLineH justifyT">During many years the music have been one of my greatest passions. 
                     I had the opportunity to play among many great musicians. While living on Morocco I could enjoy performing latin music

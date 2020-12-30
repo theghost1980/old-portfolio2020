@@ -133,7 +133,7 @@ class Contact extends React.Component {
         event.preventDefault();
       }
     
-      sendFeedback (variables) {
+      sendFeedback (variables) { 
         _emailJs.init(userId);
         _emailJs.send(
           serviceId, templateId,
