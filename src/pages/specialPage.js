@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 //components
+import Head from '../components/Head';
 // translations
 import { useTranslation } from "react-i18next";
 //media-imgs
@@ -40,6 +41,7 @@ const Specialpage = () => {
 
     return (
         <div className="specialCont">
+            <Head title={t('music.specialTitle')}/>
             <div className="buttonSpeCont">
                 <input type="text" 
                     onChange={(e) => setPassword(e.target.value)} 
