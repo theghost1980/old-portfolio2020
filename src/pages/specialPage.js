@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //components
 import Head from '../components/Head';
 // translations
@@ -17,6 +17,13 @@ const Specialpage = () => {
 
     const { t } = useTranslation();
 
+    // test gtag
+    useEffect(() => {
+        console.log('gtag object');
+        console.log(window.gtag);
+      }, []);
+    // end test
+
     const handleDownload = () => {
         // console.log('password field:',password);
         if (password === "navidad2020$$"){
@@ -25,17 +32,30 @@ const Specialpage = () => {
             try {
                   const _path = "https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Digital-Album-Inspiration.zip";
                   Filesaver.saveAs( _path, "Inspiración de Navidad");
+                  //sending data to google analytics
+                  window.gtag('event', 'download', {
+                    'method': 'true'
+                  });
 
               } catch (err) {
                   console.log('=====Fatal Error Downloading Files=====');
                   console.log(err);
                   console.log('Please contact me using the contact page');
                   console.log('=====End Error Downloading Files=====');
+                  //sending data to google analytics
+                  window.gtag('event', 'download', {
+                    'method': 'failed'
+                  });
           
             }
         } else if (password !== "navidad2020$$") {
             console.log(`${t('music.results')}`);
             alert(`${t('music.results')}`);
+            //sending data to google analytics
+            window.gtag('event', 'download', {
+                'method': 'failed attempt'
+            });
+            // console.log(window.gtag);
         }
     }
 
