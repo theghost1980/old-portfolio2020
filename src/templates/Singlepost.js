@@ -25,7 +25,8 @@ export const query = graphql`
 `
 
 const Singlepost = (props) => {
-  const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const _lang = i18n.language || 'es';
 
     const _dataJSON = props.data.contentfulBlogPost.body.json;
     const Text = ({ children }) => <p className="paraPost">{children}</p>;
@@ -65,7 +66,7 @@ const Singlepost = (props) => {
 
     return ( 
         <div className="blogTemplateContainer">
-           <Head title={props.data.contentfulBlogPost.title}/>
+           <Head title={props.data.contentfulBlogPost.title} lang={_lang}/>
             <p className="postTitlePost">{props.data.contentfulBlogPost.title}</p>
             <div className="mainImgPostCont">
               <img src={props.data.contentfulBlogPost.mainImage.fluid.src} className="mainImagePost" alt={props.data.contentfulBlogPost.mainImage.fluid.src}/>

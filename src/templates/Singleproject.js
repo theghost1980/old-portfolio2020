@@ -28,7 +28,8 @@ export const query = graphql`
 `
 
 const Singleproject = (props) => {
-  const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const _lang = i18n.language || 'es';
 
     const _dataJSON = props.data.contentfulProjects.description.json;
     const Text = ({ children }) => <p className="paraPost">{children}</p>;
@@ -68,7 +69,7 @@ const Singleproject = (props) => {
 
     return (
         <div className="blogTemplateContainer">
-          <Head title={props.data.contentfulProjects.title}/>
+          <Head title={props.data.contentfulProjects.title} lang={_lang}/>
             <p className="postTitlePost">{props.data.contentfulProjects.title}</p>
             <div className="divLinkVisit">  
                 <p className="projectVisitText">{t('project.visit')}</p>
