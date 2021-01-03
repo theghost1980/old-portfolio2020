@@ -7,10 +7,9 @@ import { useTranslation } from "react-i18next";
 import santaImg from '../imgMedia/santaImg.jpg';
 //+++++++++++++++++
 // testing npm install file-saver 
-import Filesaver from 'file-saver';
+// import Filesaver from 'file-saver';
 // +++++++++++++++++
 
-// clave: navidad2020$$
 
 const Specialpage = () => {
     const [password, setPassword] = useState('');
@@ -27,17 +26,17 @@ const Specialpage = () => {
 
     const handleDownload = () => {
         // console.log('password field:',password);
-        if (password === "navidad2020$$"){
+        if (password === "navidad2020$$--1233--ss--22233-2asdasdaasd--asdasd-asdaasxxx"){
             console.log(`${t('music.found')}`);
-            alert(`${t('music.found')}`);
+            alert(`${t('music.found')} good try but for now no more free music :D`);
             try {
-                  const _path = "https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Digital-Album-Inspiration.zip";
-                  Filesaver.saveAs( _path, "Inspiración de Navidad");
+                //   const _path = "https://gitlab.com/saturnoman/portfolio/-/raw/master/static/DFiles/Digital-Album-Inspiration.zip";
+                //   Filesaver.saveAs( _path, "Inspiración de Navidad");
                   //sending data to google analytics
                   window.gtag('event', 'download', {
                     'method': 'true'
                   });
-                  console.log('Event sent: download, success');
+                  console.log('Event sent: download, success but no file :(');
 
               } catch (err) {
                   console.log('=====Fatal Error Downloading Files=====');

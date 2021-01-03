@@ -126,10 +126,10 @@ const Music = () => {
             <Head title={t('music.titlePage')} lang={_lang}/> 
             <div className="marginLeftRight">
                 {/* special sections for navidad */}
-                <div className="specialDiv">
+                {/* <div className="specialDiv">
                     <p className="textReadingSpecial centered">{t('music.specialP')}</p>
                     <Link to="/specialPage" className="linkMore">{t('music.readmore')}</Link>
-                </div>
+                </div> */}
                 {/* end special section */}
                 <p className="textReading topMarginTextP spreadLineH justifyT margin20">{t('music.textMusic1')}</p>
                 {/* <p className="textReading2 spreadLineH justifyT">During many years the music have been one of my greatest passions. 
