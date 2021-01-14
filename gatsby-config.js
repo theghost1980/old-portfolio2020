@@ -65,5 +65,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-advanced-sitemap`, //generates the sitemap files .xml
   ],
 }

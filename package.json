@@ -1,8 +1,8 @@
 {
-  "homepage": "http://chief-lamp.surge.sh/",
+  "homepage": "https://saturnoman.com",
   "name": "gatsby-portfolio-developer-musician",
   "private": true,
-  "description": "A portfolio using paypal api, layout component, alice carousel, contentful, graphql and more.",
+  "description": "A modern portfolio based on GatsbyJS, ReactJS, headless CMS, SEO, featuring paypal checkout, music downloads and web technologies.",
   "version": "0.1.0",
   "author": "Saturno Mangieri GH @theghost1980",
   "dependencies": {
@@ -14,6 +14,7 @@
     "file-saver": "^2.0.5",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
+    "gatsby-plugin-advanced-sitemap": "^1.5.6",
     "gatsby-plugin-google-gtag": "^2.5.0",
     "gatsby-plugin-layout": "^1.6.0",
     "gatsby-plugin-manifest": "^2.9.1",
@@ -48,6 +49,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "combo": "gatsby build && gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
