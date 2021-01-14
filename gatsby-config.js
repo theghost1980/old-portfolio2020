@@ -76,5 +76,12 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://saturnoman.com`,
+        stripQueryString: true,
+      },
+    },
   ],
 }
