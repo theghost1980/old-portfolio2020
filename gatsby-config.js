@@ -9,11 +9,14 @@ if (!process.env.CONTENTFUL_SPACE_ID || !process.env.CONTENTFUL_ACCESS_TOKEN) {
 }
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://saturnoman.com',
     title: 'Music & Dev',
     author: 'Saturno Mangieri - github.com/theghost1980',
+    description: 'A modern portfolio based on GatsbyJS, ReactJS, headless CMS, SEO, featuring paypal checkout, music downloads and web technologies.'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-advanced-sitemap`, //generates the sitemap files .xml
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,6 +68,5 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-advanced-sitemap`, //generates the sitemap files .xml
   ],
 }
