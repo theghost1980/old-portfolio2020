@@ -68,5 +68,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://saturnoman.com',
+        sitemap: 'https://saturnoman.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      },
+    },
   ],
 }
