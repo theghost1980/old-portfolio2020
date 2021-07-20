@@ -60,7 +60,8 @@
         "altItem7": "Trabajo solo en equipo"
     },
     "portfolio": {
-      "titlePage": "Portfalio"
+      "titlePage": "Portafolio",
+      "welcomeText": "Mis trabajos actuales comprenden algunas áreas como: Backend, Frontend, UI/UX, juegos y blockchain(tecnología conocida en su aplicación a las criptomonedas, a.k.a: Bitcoin.)"
     },
     "music": {
       "specialTitle": "Regalo",

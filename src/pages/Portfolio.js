@@ -12,50 +12,48 @@ const Portfolio = (props) => {
 
     //loading data from contentful api
     const data = useStaticQuery(graphql`
-    query{
-        allContentfulProjects(sort: {fields: publishedDate, order: DESC}){
+        query{
+            allDatoCmsPortfolio(sort: {order: DESC, fields: dateTime}){
             edges {
                 node {
-                    id
                     title
                     slug
-                    publishedDate(formatString: "MMMM Do, yyyy")
-                    mainImage {
-                        file {
-                            url
+                    dateTime(fromNow: true)
+                    id
+                    cover {
+                        fluid {
+                            src
                         }
                     }
-                    seo {
-                        seo
-                    }
-                    lang
+                    locale
+                    seoLine
+                    techUsed
                 }     
             }
         }
-        }
-    `);
+    }`);
+    console.log(data);
 
     return (
             // <Layout>
                 <div className="portfolioContainer">
+                    <p className="textHome centered">{t('portfolio.welcomeText')}</p>
                     <Head title={t('portfolio.titlePage')} lang={_lang}/>  
                     <ul className="projectList" >
-                        {data.allContentfulProjects.edges.filter(project => project.node.lang === _lang).map(filteredProject => {
-                              const _src = filteredProject.node.mainImage.file.url;
+                        {data.allDatoCmsPortfolio.edges.filter(project => project.node.locale === _lang).map(filteredProject => {
+                              const _src = filteredProject.node.cover.fluid.src;
                               return (
                                   <li key={filteredProject.node.id}>
                                       <Link className="navLinkProject"  to={`/Portfolio/${filteredProject.node.slug}`}>
                                           <div className="titleDateProject">
                                               <p className="projectTitle">{filteredProject.node.title}</p>
-                                              <p className="projectDatePublished">{filteredProject.node.publishedDate}</p>
-                                          </div>
-                                          <div className="seoContainer">
-                                              <p className="seoText">SEO: {filteredProject.node.seo.seo}</p>
+                                              <p className="projectDatePublished">{filteredProject.node.dateTime}</p>
                                           </div>
                                           <hr className="hrProject" />
                                           <div className="imgProjectCont">
                                               <img src={_src} alt={filteredProject.node.title} className="imgProject" />
                                           </div>
+                                          <p className="seoText centered marginsLR">SEO: {String(filteredProject.node.seoLine).split(",").join(" ")}</p>
                                       </Link>
                                   </li>
                               )

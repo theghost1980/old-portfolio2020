@@ -12,19 +12,19 @@ const Blog = (props) => {
     //loading data from contentful api
     const data = useStaticQuery(graphql`
         query{
-            allContentfulBlogPost(sort: {fields: publishedDate, order: DESC}){
+            allDatoCmsBlogpost(sort: {order: DESC, fields: dateTime}){
             edges {
                 node {
                     title
                     slug
-                    publishedDate(formatString: "MMMM Do, yyyy")
+                    dateTime(fromNow: true)
                     id
-                    mainImage {
-                        file {
-                            url
+                    cover {
+                        fluid {
+                            src
                         }
                     }
-                    lang
+                    locale
                 }     
             }
         }
@@ -35,15 +35,14 @@ const Blog = (props) => {
             <div className="containerBlogList">
                 <Head title="Blog" lang={_lang}/> 
                 <ul className="postList">
-                    {data.allContentfulBlogPost.edges.filter(post => post.node.lang === _lang).map(filteredPost => {
-                        // console.log(filteredPost);
-                        const _url = filteredPost.node.mainImage.file.url;
+                    {data.allDatoCmsBlogpost.edges.filter(post => post.node.locale === _lang).map(filteredPost => {
+                        const _url = filteredPost.node.cover.fluid.src;
                         return (
                             <li className="post" key={filteredPost.node.id}>
                                 <Link className="navLinkPost" to={`/Blog/${filteredPost.node.slug}`}>
                                     <div className="containerTextPost">
                                         <p className="postTitle">{filteredPost.node.title}</p>
-                                        <p className="postDate">{filteredPost.node.publishedDate}</p>
+                                        <p className="postDate">{filteredPost.node.dateTime}</p>
                                     </div>
                                     <div className="containerImgPost">
                                         <img src={_url} alt={filteredPost.node.title} className="blogListImg"/>

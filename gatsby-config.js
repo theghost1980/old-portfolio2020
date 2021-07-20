@@ -15,29 +15,11 @@ module.exports = {
     description: 'A modern portfolio based on GatsbyJS, ReactJS, headless CMS, SEO, featuring paypal checkout, music downloads and web technologies.'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-advanced-sitemap`, //generates the sitemap files .xml
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve(`./src/components/Layout.js`),
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -45,6 +27,30 @@ module.exports = {
       options: {
         name: 'src',
         path: `${__dirname}/src/`,
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-advanced-sitemap`, //generates the sitemap files .xml
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: `${process.env.api_key}`,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-contentful`,
+    //   options: {
+    //     spaceId: process.env.CONTENTFUL_SPACE_ID,
+    //     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/Layout.js`),
       },
     },
     {

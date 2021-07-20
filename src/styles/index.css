@@ -15,7 +15,7 @@
 /* cd album image credits https://www.seekpng.com/idown/u2y3w7w7i1t4y3w7_graphic-instruments-guitar-design-flame-musical-clipart-flaming/ */
 /* https://www.freepik.es/vector-premium/linda-santa-claus-tipografia-ho-ho-ho_6038406.htm */
 /* fonts */
-@import url('https://fonts.googleapis.com/css?family=Lato|Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&family=Poppins:ital,wght@0,200;0,300;0,600;0,700;1,500&display=swap');
 
 /* variables */
 :root {
@@ -87,6 +87,7 @@ html,body {
     flex-grow: 1;
 }
 .dataContainer {
+  z-index: 1000;    
   width: 100%;
   margin: 0 auto;
 }
@@ -122,6 +123,10 @@ html,body {
 /* end home */
 
 /* margins & paddings */
+.marginsLR {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .noBottomMargin {
     margin-bottom: 0px;
 }
@@ -179,6 +184,26 @@ nav {
     justify-content: center;
     align-items: center;
     transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.faceContNavBar {
+    display: block;
+    width: 320px;
+    height: auto;
+    transition: all 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.imgFaceNavBar {
+    width: 100%;
+    height: 100%;
+}
+.addZIndex {
+    position: relative;
+    z-index: -1;
+    opacity: 1;
+}
+.removeZIndex {
+    position: relative;
+    z-index: initial;
+    opacity: 0.35;
 }
 .bgLeft {
     background-position: left;
@@ -472,6 +497,9 @@ footer {
   .spreadLineH {
       line-height: 1.9em;
   }
+  .boxShadow1 {
+    box-shadow: 1px 1px 8px 1px rgba(0, 57, 110, 0.39);
+  }
   .divCol31 {
     display: flex;
     flex-direction: column;
@@ -702,6 +730,8 @@ footer {
     width: 100%;
     height: auto;
     margin-bottom: 40px;
+    background: #f7c5213b;
+    border-radius: 8px;
 }
 .mainImgPostCont {
     display: block;
@@ -847,8 +877,9 @@ footer {
     display: flex;
     flex-direction: column;
     list-style: none;
+    /* flex-wrap: wrap; */
     padding-inline-start: 0px;
-    max-width: 70%;
+    max-width: 80%;
 }
 .projectList li {
     border-radius: 5px;
@@ -875,7 +906,7 @@ footer {
 }
 .seoText {
     color: rgb(99, 162, 221);
-    font-size: smaller;
+    font-size: small;
     font-family: var(--var-secondary-font);
 }
 .navLinkProject {

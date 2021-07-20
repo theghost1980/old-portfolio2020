@@ -18,7 +18,8 @@ const Footer = (props) => {
                 <li>GatsbyJs</li>
                 <li>ReactJs</li>
                 <li>GraphQL</li>
-                <li>Contentful</li>
+                <li>DatoCMS</li>
+                <li>Cocos Creator</li>
                 <li>Javascript</li>
                 <li>Pexels</li>
                 <li>Icons8</li>

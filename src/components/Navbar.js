@@ -7,8 +7,25 @@ import Musicplayer from './Musicplayer';
 import '../styles/index.css';
 //translation {t('home.link')}
 import { useTranslation } from "react-i18next";
+//components
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from "gatsby"
 
 const Navbar = (props) => {
+    //graphql queries
+    const data = useStaticQuery(graphql`
+    query {
+        faceImage: file(relativePath: {eq: "filtered.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                }
+            }
+        }
+    }
+    `);
+    //end grapqhql queries
+
     // translation
     const { t } = useTranslation();
 
@@ -20,11 +37,14 @@ const Navbar = (props) => {
 
     return (
         <nav className={expanded ? 'expanded': 'noExpanded'}>
-            <div className={expanded ? 'faceContainer': 'faceContainer bgLeft'}>
+            <div className={`faceContNavBar ${expanded ? `addZIndex`: `removeZIndex`}`}>
+                <Img fluid={data.faceImage.childImageSharp.fluid} className="imgFaceNavBar" />
+            </div>
+            {/* <div className={expanded ? 'faceContainer': 'faceContainer bgLeft'}>
                 <Link to="/" activeClassName="activeNavLink" onClick={() => setExpanded(true)} className="noLinks">
                     {!expanded && <TextNE expanded={expanded} topMargin={false} /> }
                 </Link>
-            </div>
+            </div> */}
             <div className="menuContainer">
                 {expanded && <TextNE expanded={!expanded} topMargin={true} /> }
                 <ul className={expanded ? 'horizontalUl': 'horizontalUl animateUl'}>

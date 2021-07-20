@@ -60,7 +60,8 @@
         "altItem7": "One Man Project or More for Websites"
     },
     "portfolio": {
-      "titlePage": "Portfolio"
+      "titlePage": "Portfolio",
+      "welcomeText": "My current works include some areas such as: Backend, Frontend, UI/UX, games and blockchain (technology known in its application to cryptocurrencies, a.k.a: Bitcoin)."
     },
     "music": {
       "specialTitle": "Gift",
