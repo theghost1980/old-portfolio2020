@@ -14,3 +14,6 @@
     - react-h5-audio-player to play some of my music.
   
 This project was one of my first projects when taking seriously about Web Development It is a mixed profile.
+
+Currently this repository is being hosted in [GitLab](https://gitlab.com/saturnoman/portfolio) and deployed using [Netlify](https://frosty-poincare-a18064.netlify.app/).
+I have cloned into github just for centralized my work!
